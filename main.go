@@ -102,7 +102,7 @@ func main() {
 	cleanPort = strings.ReplaceAll(cleanPort, "\r", "")
 
 	if _, err := strconv.Atoi(port); err != nil {
-		log.Printf("invalid port: %w", err)
+		log.Printf("invalid port: %v", err)
 	} else {
 		log.Printf("Serving on port: %s\n", cleanPort)
 		log.Fatal(srv.ListenAndServe())
