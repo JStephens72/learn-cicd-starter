@@ -30,5 +30,4 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Build and push Docker image
-        run: gcloud builds submit \
-               --tag us-central1-docker.pkg.dev/decisive-triode-490419-k6/notely-ar-repo/notely:${{ github.sha }} .
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/decisive-triode-490419-k6/notely-ar-repo/notely:latest .
