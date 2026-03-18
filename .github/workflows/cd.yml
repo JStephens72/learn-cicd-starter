@@ -21,7 +21,6 @@ jobs:
       - name: Build app
         run: scripts/buildprod.sh
 
-
       - id: auth
         uses: google-github-actions/auth@v2
         with:
@@ -29,9 +28,6 @@ jobs:
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
-
-      - name: Use gcloud CLI
-        run: gcloud info
 
       - name: Build and push Docker image
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/decisive-triode-490419-k6/notely-ar-repo/notely:latest .
